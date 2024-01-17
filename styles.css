@@ -1,0 +1,99 @@
+:root {
+    --main: rgba(62,61,61,255);
+    --white: rgba(255, 255, 255, 255);
+    --buttons: rgba(160,130,108,255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body, html {
+    height: 100%;
+    background-color: var(--white);
+}
+
+/* HEADER WITH BACKGROUND IMAGE */
+
+header {
+    position: relative; /* Needed for absolute positioning inside */
+    background-image: url('./Images/header.jpg'); /* Update this path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 75.7vh; /* Full height */
+    display: flex;
+    align-items: flex-end; /* Aligns the content to the bottom */
+    justify-content: flex-start; /* Aligns the content to the left */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 2em; /* Adjust the padding to move the text from the left edge */
+    padding-bottom: 2em; /* Adjust the padding to move the text from the bottom edge */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: left;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 2.5em;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* NAVBAR */
+
+nav {
+    position: absolute;
+    top: 0; /* Aligns the nav to the top of the header */
+    right: 0; /* Aligns the nav to the right of the header */
+    padding: 1em; /* Adds some space between the nav and the edges of the header */
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns the nav items to the right */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 0 10px; /* Reduced padding for less space between nav items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 300;
+    font-size: 0.95em; /* You can adjust the font size for better fit if necessary */
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    color: var(--buttons);
+}
+
+.donate-button {
+    background-color: var(--buttons);
+    color: var(--white);
+    padding: 10px 20px;
+    transition: background-color 0.3 ease;
+}
+
+.donate-button:hover,
+.donate-button:focus {
+    background-color: darken(var(--buttons), 10%);
+    text-decoration: none;
+}
